@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tim Mathis | Web Developer</title>
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicon-128.png" sizes="128x128" />
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="lib/jQuery/jquery-ui.min.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Khula:400,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+
+    <script src="lib/jQuery/jquery-3.2.0.min.js"></script>
+    <script src="lib/jQuery/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/scrollreveal/scrollreveal.min.js"></script>
+    <script src="https://use.fontawesome.com/8fb509984d.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/main.js"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-97304518-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+  </head>
+  <body>
+	<header>
+	<nav>
+		<ul>
+			<li><a href="#specialties">Specialties</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#work">Work</a></li>
+			<li><a href="#lets-talk">Let's Talk</a></li>
+		</ul>
+	</nav>
+    <div class="container-fluid hero-wrapper">
+        <div class="hero-image">
+          <div id="scrollApp" ng-controller="titleScrollController" class="hero-text">
+            <a id="logo" href="#"><img class="img-responsive" src="images/logo.png"></a>
+            <h1 ng-mouseenter="startLoop()" ng-mouseleave="stopLoop()">{{ jobTitle }}</h1>
+            <div class="lets-talk">Let's Talk</div>
+          </div>
+        </div>
+    </div>
+	</header>
+	<a name="specialties"></a>
+    <div class="container-fluid specialties page-section">
+      <h1>Specialties</h1>
+      <div class="row">
+        <div class="col-sm-offset-2 col-sm-2">
+          <img class="img-responsive" src="images/frontend-development-icon.png" />
+          <h2>Frontend Development</h2>
+          <p>I use HTML/CSS/Javascript to implement aesthetic designs and enhance user experience.</p>
+        </div>
+        <div class="col-sm-offset-1 col-sm-2">
+          <img class="img-responsive" src="images/responsive-design-icon.png" />
+          <h2>Responsive Design</h2>
+          <p>I make websites that adapt to be beautiful and easy-to-use on any device.</p>
+        </div>
+        <div class="col-sm-offset-1 col-sm-2">
+          <img class="img-responsive" src="images/psd-to-website-icon.png" />
+          <h2>PSD to <br />Website</h2>
+          <p>I turn web designs into pixel-perfect code to implement into whatever platform you use.</p>
+        </div>
+      </div>
+    </div>
+	<a name="skills"></a>
+    <div class="container-fluid skills page-section">
+      <h1>Skills</h1>
+      <div class="row">
+        <div class="col-sm-4">
+          <div>HTML5</div>
+          <div>CSS3</div>
+          <div>JavaScript</div>
+          <div>Clean Code</div>
+        </div>
+        <div class="col-sm-4">
+          <div>Organization</div>
+          <div>Bootstrap</div>
+          <div>WordPress</div>
+          <div>jQuery</div>
+        </div>
+        <div class="col-sm-4">
+          <div>Sass</div>
+          <div>Photoshop CS7</div>
+          <div>PHP</div>
+          <div>Attention to Detail</div>
+        </div>
+      </div>
+    </div>
+    <a name="work"></a>
+    <div class="container-fluid work">
+      <h1>Work</h1>
+      <div class="row">
+        <div data-id="0" class="col-sm-3 project">
+          <div><span class="helper"></span><img src="images/logo - BTE Racing.png" /></div>
+          <img class="img-responsive portfolio-image" src="images/portfolio - BTE Racing.png" />
+        </div>
+        <div data-id="1" class="col-sm-3 project">
+          <div><span class="helper"></span><img src="images/logo - Coleman Tractor.png" /></div>
+          <img class="img-responsive portfolio-image" src="images/portfolio - Coleman Tractor.png" />
+        </div>
+        <div data-id="2" class="col-sm-3 project">
+          <div><span class="helper"></span><img src="images/logo - Memphis Barbecue Supply.png" /></div>
+          <img class="img-responsive portfolio-image" src="images/portfolio - Memphis Barbeque Supply.png" />
+        </div>
+        <div data-id="3" class="col-sm-3 project">
+          <div><span class="helper"></span><img src="images/logo - Memphis Children's Clinic.png" /></div>
+          <img class="img-responsive portfolio-image" src="images/portfolio - Memphis Children's Clinic.png" />
+        </div>
+      </div>
+      <div class="row">
+        <div data-id="4" class="col-sm-3 project">
+          <div><span class="helper"></span><img src="images/logo - Good News Handicrafts.png" /></div>
+          <img class="img-responsive portfolio-image" src="images/portfolio - Good News Handicrafts.png" />
+        </div>
+        <div data-id="5" class="col-sm-3 project">
+          <div><span class="helper"></span><img src="images/logo - Piper Orthodontics.png" /></div>
+          <img class="img-responsive portfolio-image" src="images/portfolio - Piper Orthodontics.png" />
+        </div>
+        <div data-id="6" class="col-sm-3 project">
+          <div><span class="helper"></span><img src="images/logo - Camp Arc-en-Ciel.png" /></div>
+          <img class="img-responsive portfolio-image" src="images/portfolio - Camp Arc-en-Ciel.png" />
+        </div>
+        <div data-id="7" class="col-sm-3 project">
+          <div><span class="helper"></span><img src="images/logo - Southern Heritage Classic.png" /></div>
+          <img class="img-responsive portfolio-image" src="images/portfolio - Southern Heritage Classic.png" />
+        </div>
+      </div>
+      <a name="project"></a>
+      <div class="project-detail">
+        <i class="fa fa-chevron-up back-to-work" aria-hidden="true"></i>
+        <div class="row">
+          <div class="col-lg-4 col-sm-offset-3 project-image"><img class="img-responsive" src="" /></div>
+          <div class="col-sm-3 description">
+            <h1></h1>
+            <p></p>
+            <a class="cta" target="_blank" href="">Visit Site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a name="lets-talk"></a>
+    <div class="container-fluid contact page-section">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h1>Let's Talk</h1>
+          <p>Need some help on a project? How about a website for your business or organization? I'd love to help. Let's get in contact.</p>
+          <div class="vertical-middle">
+            <div class="container">
+                <div>
+                    <div id="contactApp" ng-controller="ContactController" class="panel-body">
+                        <form ng-submit="submit(contactform)" name="contactform" method="POST" action="" class="form-horizontal" role="form">
+                            <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+                                <div class="col-lg-10">
+                                    <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+                                <div class="col-lg-10">
+                                    <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+                                <div class="col-lg-10">
+                                    <input ng-model="formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+                                <div class="col-lg-10">
+                                    <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-10">
+                                    <button type="submit" class="cta btn" ng-disabled="submitButtonDisabled">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <p ng-class="result">{{ resultMessage }}</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer page-section">
+      <p>Made by Tim Mathis &copy; <span></span></p>
+      <div class="row">
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+.cta, .hero-text div.lets-talk, .work .project-detail a.cta {
+  color: #ffffff;
+  display: inline-block;
+  padding: 7px 15px 7px 15px;
+  background-color: #274156;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  text-decoration: none;
+  -moz-transition: padding, 0.2s;
+  -o-transition: padding, 0.2s;
+  -webkit-transition: padding, 0.2s;
+  transition: padding, 0.2s;
+  -moz-transition: background-color, 0.2s;
+  -o-transition: background-color, 0.2s;
+  -webkit-transition: background-color, 0.2s;
+  transition: background-color, 0.2s;
+  -moz-transition: border-radius, 0.5s;
+  -o-transition: border-radius, 0.5s;
+  -webkit-transition: border-radius, 0.5s;
+  transition: border-radius, 0.5s; }
+  .cta:hover, .hero-text div.lets-talk:hover, .work .project-detail a.cta:hover {
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #f1e9f5;
+    color: #274156;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px; }
+  .cta:active, .hero-text div.lets-talk:active, .work .project-detail a.cta:active {
+    color: #ffffff;
+    background-color: #274156; }
+
+body, html {
+  height: 100%; }
+  body p, html p {
+    font-family: "Khula", sans-serif;
+    font-weight: 400;
+    font-size: 18px; }
+
+.container-fluid.hero-wrapper {
+  padding-right: 0;
+  padding-left: 0; }
+
+header, .hero-image, .hero-wrapper {
+  height: 100%; }
+
+.hero-image, .hero-wrapper {
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: cover;
+  position: relative; }
+
+.hero-wrapper {
+  background-image: url("../images/memphis.jpg");
+  background-color: #101b24;
+  -moz-transition: background-position 0.2s;
+  -o-transition: background-position 0.2s;
+  -webkit-transition: background-position 0.2s;
+  transition: background-position 0.2s; }
+
+/* The hero image */
+.hero-image {
+  position: relative;
+  /* The image used */
+  background-position: 0 0;
+  -moz-transition: background-image 1s;
+  -o-transition: background-image 1s;
+  -webkit-transition: background-image 1s;
+  transition: background-image 1s; }
+
+.hero-image #logo {
+  display: block; }
+  .hero-image #logo img {
+    display: inline-block; }
+
+/* Place text in the middle of the image */
+.hero-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; }
+  .hero-text h1 {
+    font-weight: 100; }
+  .hero-text div.lets-talk {
+    margin-top: 100px;
+    cursor: pointer; }
+
+.page-section, .work {
+  padding: 50px; }
+  .page-section h1, .work h1 {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    text-transform: uppercase; }
+  .page-section h1, .page-section div, .work h1, .work div {
+    text-align: center; }
+  .page-section img.img-responsive, .work img.img-responsive {
+    margin: 0 auto; }
+
+.specialties {
+  background-color: #274156;
+  color: #ffffff; }
+  .specialties h2 {
+    font-family: "Khula", sans-serif;
+    font-weight: 800;
+    font-size: 30px; }
+  .specialties img {
+    width: 120px; }
+
+@media all and (max-width: 500px) {
+  /* screen size until 500px */
+  .specialties h1 {
+    font-size: 45px; } }
+
+.skills {
+  color: #274156;
+  height: auto;
+  padding-bottom: 100px;
+  background-color: #9edae4;
+  background-image: url("../images/bg-watercolor.jpg");
+  background-position: center;
+  background-size: cover; }
+  @media screen and (min-width: 767px) {
+    .skills {
+      background-attachment: fixed; } }
+  .skills div {
+    font-family: "Khula", sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    padding: 5px; }
+
+.work {
+  top: 0;
+  height: auto;
+  color: #274156;
+  background-color: #f1e9f5; }
+  .work .row .project {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px; }
+    .work .row .project .portfolio-image {
+      float: left; }
+    .work .row .project div {
+      cursor: pointer;
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      z-index: 1;
+      height: 100%;
+      background-color: #274156;
+      opacity: .8;
+      -moz-transition: opacity 1s;
+      -o-transition: opacity 1s;
+      -webkit-transition: opacity 1s;
+      transition: opacity 1s; }
+      .work .row .project div:hover {
+        opacity: 0; }
+      .work .row .project div .helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle; }
+  .work .project-detail {
+    display: none;
+    position: relative; }
+    .work .project-detail .back-to-work {
+      display: block;
+      color: #ffffff;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      padding: 10px;
+      z-index: 4;
+      font-size: 40px;
+      cursor: pointer;
+      background-color: #274156; }
+      .work .project-detail .back-to-work:hover {
+        color: #274156;
+        background-color: #f1e9f5; }
+    .work .project-detail .description {
+      background-color: #778da4; }
+    .work .project-detail h1 {
+      padding-top: 15px;
+      font-size: 25px;
+      color: #ffffff; }
+    .work .project-detail p {
+      text-align: left;
+      padding: 15px; }
+    .work .project-detail a.cta {
+      color: #274156;
+      background-color: #f1e9f5;
+      margin-bottom: 50px; }
+      .work .project-detail a.cta:hover {
+        background-color: #274156;
+        color: #ffffff; }
+      .work .project-detail a.cta:active {
+        color: #274156;
+        background-color: #f1e9f5; }
+
+.contact {
+  color: #ffffff;
+  background-color: #778da4; }
+  .contact a {
+    color: #ffffff; }
+    .contact a:hover {
+      text-decoration: none; }
+  .contact p {
+    margin: 0 20% 20px 20%; }
+  .contact p.center {
+    text-align: center; }
+  .contact .container {
+    max-width: 500px; }
+  .contact .panel.panel-default {
+    border: none;
+    background-color: transparent;
+    text-align: center; }
+  .contact button {
+    font-size: 20px;
+    border-radius: 0; }
+  .contact .bg-success {
+    color: #274156;
+    background-color: #f1e9f5; }
+
+.form-group div {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+.footer {
+  height: auto;
+  background-color: #101b24; }
+  .footer p {
+    color: #ffffff;
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center; }

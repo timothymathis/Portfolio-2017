@@ -1,0 +1,331 @@
+@import "mixins";
+
+$light-blue: #9edae4;
+$dark-blue: #274156;
+$very-dark-blue: #101b24;
+$gray: #f1e9f5;
+$dark-gray: #778da4;
+$font-light: #ffffff;
+$font-dark: $dark-blue;
+$thick-font: 'Khula', sans-serif;
+$thin-font: 'Julius Sans One', sans-serif;
+$hero-font: 'Montserrat', sans-serif;
+$break-small: 767px;
+ 
+.cta {
+  color: $font-light;
+  display: inline-block;
+  padding: 7px 15px 7px 15px;
+  background-color: $dark-blue;
+  font-family: $hero-font;
+  font-size: 25px;
+  font-weight: 300;
+  text-decoration: none;
+  @include transition(padding, .2s);
+  @include transition(background-color, .2s);
+  @include transition(border-radius, .5s);
+
+  &:hover {
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: $gray;
+    color: $font-dark;
+    @include rounded(25px);
+  }
+
+  &:active {
+    color: $font-light;
+    background-color: $dark-blue;
+  }
+}
+
+body, html {
+    height:100%;
+
+    p {
+      font-family: $thick-font;
+      font-weight: 400;
+      font-size: 18px;
+    }
+}
+
+.wrapper {
+
+}
+
+.container-fluid.hero-wrapper {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+header, .hero-image, .hero-wrapper {
+    height: 100%;
+}
+
+.hero-image, .hero-wrapper {
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-wrapper {
+  background-image: url("../images/memphis.jpg");
+  background-color: $very-dark-blue;
+  @include transition(background-position .2s);
+}
+
+/* The hero image */
+.hero-image {
+    position: relative;
+    /* The image used */
+    // background-image: url("../images/world-map.png");
+    background-position: 0 0;
+    @include transition(background-image 1s);
+  }
+
+.hero-image #logo {
+  display: block;
+
+  img {
+    display: inline-block;
+  }
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    font-family: $hero-font;
+    font-weight: 100;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+    h1 {
+      font-weight: 100;
+    }
+
+    div.lets-talk {
+      @extend .cta;
+      margin-top: 100px;
+      cursor: pointer;
+    }
+}
+
+.page-section, .work {
+  padding: 50px;
+
+  h1 {
+    font-family: $thin-font;
+    font-weight: 100;
+    font-size: 60px;
+    text-transform: uppercase;
+  }
+
+  h1, div {
+    text-align: center;
+  }
+
+  img.img-responsive {
+    margin: 0 auto;
+  }
+}
+
+.specialties {
+  background-color: $dark-blue;
+  color: $font-light;
+
+  h2 {
+    font-family: $thick-font;
+    font-weight: 800;
+    font-size: 30px;
+  }
+
+  img {
+    width: 120px;
+  }
+}
+
+@media all and (max-width: 500px) { /* screen size until 500px */
+  .specialties h1 {
+    font-size: 45px;
+  }
+}
+
+.skills {
+  color: $font-dark;
+  height: auto;
+  padding-bottom: 100px;
+  background-color: $light-blue;
+  background-image: url("../images/bg-watercolor.jpg");
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-width: $break-small) {
+    background-attachment: fixed;
+  }
+
+  div {
+    font-family: $thick-font;
+    font-weight: 800;
+    font-size: 25px;
+    padding: 5px;
+  }
+}
+
+.work {
+  top: 0;
+  height: auto;
+  color: $dark-blue;
+  background-color: $gray;
+
+  .row .project {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    .portfolio-image {
+      float:left;
+    }
+
+    div {
+      cursor: pointer;
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      z-index: 1;
+      height: 100%;
+      background-color: $dark-blue;
+      opacity: .8;
+      @include transition(opacity 1s);
+
+      &:hover {
+        opacity: 0;
+      }
+      .helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+  .project-detail {
+
+    display: none;
+    position: relative;
+
+    .back-to-work {
+      display: block;
+      color: $font-light;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      padding: 10px;
+      z-index: 4;
+      font-size: 40px;
+      cursor: pointer;
+      background-color: $dark-blue;
+
+      &:hover {
+        color: $dark-blue;
+        background-color: $gray;
+      }
+    }
+
+    .description {
+      background-color: $dark-gray;
+    }
+
+    h1 {
+      padding-top: 15px;
+      font-size:25px;
+      color: $font-light;
+    }
+
+    p {
+      text-align: left;
+      padding: 15px;
+    }
+
+    a.cta {
+      @extend .cta;
+      color: $font-dark;
+      background-color: $gray;
+      margin-bottom: 50px;
+
+      &:hover {
+        background-color: $dark-blue;
+        color: $font-light;
+      }
+
+      &:active {
+        color: $font-dark;
+        background-color: $gray;
+      }
+
+    }
+  }
+}
+
+.contact {
+  color: $font-light;
+  background-color: $dark-gray;
+
+  a {
+    color: $font-light;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin: 0 20% 20px 20%;
+  }
+
+  p.center {
+    text-align: center;
+  }
+
+  .container {
+    max-width: 500px;
+  }
+  .panel.panel-default {
+    border: none;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  button {
+    font-size: 20px;
+    border-radius: 0;
+  }
+
+  .bg-success{
+    color: $font-dark;
+    background-color: $gray;
+  }
+}
+
+.form-group div {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  height: auto;
+  background-color: $very-dark-blue;
+
+  p {
+    color: $font-light;
+    font-family: $thin-font;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+  }
+}
